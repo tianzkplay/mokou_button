@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>もこうガチギレボタン</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        img {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>もこうボタン</h1>
+        <img src="mokou.png" alt="Bird">
+        <div class="button-grid">
+            <button onclick="playSound('mokouSound1')">放送始めるや否や</button>
+            <button onclick="playSound('mokouSound2')">ヤフミだのうんこちゃんだの</button>
+            <button onclick="playSound('mokouSound3')">ぶっ◯すぞ</button>
+            <button onclick="playSound('mokouSound4')">配信者の気分損ねんなよ</button>
+            <button onclick="playSound('mokouSound5')">あ？</button>
+            <button onclick="playSound('mokouSound6')">しばき倒すぞこのクソガキが</button>
+            <button onclick="playSound('mokouSound7')">ヴォイ</button>
+            <button onclick="playSound('mokouSound8')">謝罪しろ今すぐ</button>
+        </div>
+        <a href="https://www.youtube.com/watch?v=uDhejtWCu3s">音源</a>
+    </div>
+
+    <audio id="mokouSound1" src="sounds/housou.mp3" preload="auto"></audio>
+    <audio id="mokouSound2" src="sounds/yafumi.mp3" preload="auto"></audio>
+    <audio id="mokouSound3" src="sounds/bukkoro.mp3" preload="auto"></audio>
+    <audio id="mokouSound4" src="sounds/hajimaru.mp3" preload="auto"></audio>
+    <audio id="mokouSound5" src="sounds/a.mp3" preload="auto"></audio>
+    <audio id="mokouSound6" src="sounds/shibaki.mp3" preload="auto"></audio>
+    <audio id="mokouSound7" src="sounds/voi.mp3" preload="auto"></audio>
+    <audio id="mokouSound8" src="sounds/shazai.mp3" preload="auto"></audio>
+
+    <script>
+        function playSound(soundId) {
+            var audio = document.getElementById(soundId);
+            audio.currentTime = 0;  // 音声を最初から再生
+            audio.play();
+        }
+    </script>
+</body>
+</html>
